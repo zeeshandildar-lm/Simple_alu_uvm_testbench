@@ -3,8 +3,8 @@ class simplealu_env extends uvm_env;
     simplealu_agent         sa_agent;
     simplelalu_scoreboard   sa_sb;
 
-    function new(string name, parent);
-        super.new(name);
+    function new(string name,uvm_component parent);
+        super.new(name, parent);
     endfunction: new
 
     function void build_phase(uvm_phase phase);

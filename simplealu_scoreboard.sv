@@ -1,4 +1,4 @@
-`uvm_analysis_imp_decl()
+//`uvm_analysis_imp_decl()
 class simplelalu_scoreboard extends uvm_scoreboard;
 `uvm_component_utils(simplelalu_scoreboard);
 

@@ -11,11 +11,12 @@ class simplealu_transaction extends uvm_sequence_item;
     endfunction: new
 
     `uvm_object_utils_begin(simplealu_transaction)
-    `uvm_field_int(a, UVM_ALL_ON)
-    `uvm_field_int(b, UVM_ALL_ON)
-    `uvm_field_int(en_i, UVM_ALL_ON)
-    `uvm_field_int(en_o, UVM_ALL_ON)
-    `uvm_field_int(select_op, UVM_ALL_ON)
+        `uvm_field_int(a, UVM_ALL_ON)
+        `uvm_field_int(b, UVM_ALL_ON)
+        `uvm_field_int(en_i, UVM_ALL_ON)
+        `uvm_field_int(en_o, UVM_ALL_ON)
+        `uvm_field_int(select_op, UVM_ALL_ON)
+        `uvm_field_int(out, UVM_ALL_ON)
     `uvm_object_utils_end
 endclass: simplealu_transaction
 

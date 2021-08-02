@@ -1,7 +1,7 @@
 module simple_alu(
-    input reg        clk,
-    input reg        en_i,
-    input reg        en_o,
+    input wire        clk,
+    input wire        en_i,
+    input wire        en_o,
     input wire [1:0] select_op,
     input wire [3:0] a,
     input wire [3:0] b,
@@ -15,8 +15,8 @@ module simple_alu(
         NAND = 2'b11;
 
         //input registers
-    reg [3:0] in_a; 
-    reg [3:0] in_b;
+    reg [3:0] in_a=0; 
+    reg [3:0] in_b=0;
 
     reg [3:0] temp;
 

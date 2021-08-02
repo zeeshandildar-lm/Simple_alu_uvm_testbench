@@ -8,7 +8,7 @@ import uvm_pkg::*;
 	`include "simplealu_driver.sv"
 	`include "simplealu_agent.sv"
 	`include "simplealu_scoreboard.sv"
-	`include "simplealu_config.sv"
+	//`include "simplealu_config.sv"
 	`include "simplealu_env.sv"
 	`include "simplealu_test.sv"
     
@@ -29,7 +29,9 @@ simple_alu dut(vif.clk       ,
                vif.b,
                vif.out);
 initial begin
-    uvm_resource_db #(virtual simplealu_if)::set(.scope("ifs"), .name("simplealu_if"), .val(vif));
+ //   uvm_config_db #(virtual simplealu_if)::set(.scope("ifs"), .name("simplealu_if"), .val(vif));
+    uvm_config_db#(virtual simplealu_if)::set(null,"*","simplealu_vif",vif);  //set method
+
     run_test();
 end
 

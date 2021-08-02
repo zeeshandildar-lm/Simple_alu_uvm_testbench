@@ -15,8 +15,11 @@ task run_phase(uvm_phase phase);
     simplealu_sequence sa_seq;
     phase.raise_objection(.obj(this));
         sa_seq = simplealu_sequence::type_id::create(.name("sa_seq"), .contxt(get_full_name()));
-        assert(sa_seq.randomize());
+        //assert(sa_seq.randomize());
         sa_seq.start(sa_env.sa_agent.sa_seqr);
+           phase.phase_done.set_drain_time(this, 200ns);
+
+        
     phase.drop_objection(.obj(this));
 endtask: run_phase
 endclass: simplealu_test
